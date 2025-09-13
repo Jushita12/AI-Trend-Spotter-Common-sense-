@@ -30,14 +30,10 @@ cd beauty-pulse-ai
 
 # Install dependencies
 npm install                # frontend
-pip install -r requirements.txt   # backend (ML/Streamlit)
 
 # Start servers
 npm run dev          # frontend
-streamlit run app.py # backend dashboard
 
-
-Open the dashboard at 👉 http://localhost:5173
 
 Datathon Focus
 
@@ -51,3 +47,4 @@ Presentation → Professional visuals and simple navigation for business users
 
 👥 Team Code Kshatriya
 Turning data into beauty insights.
+
