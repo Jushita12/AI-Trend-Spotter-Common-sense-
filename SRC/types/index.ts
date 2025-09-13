@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --color-primary: #EC4899;
+  --color-secondary: #8B5CF6;
+  --color-accent: #F59E0B;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #1F2937;
+  background: #FAFAFA;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F4F6;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #EC4899, #8B5CF6);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #DB2777, #7C3AED);
+}
+
+/* Smooth animations */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #EC4899, #8B5CF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Button animations */
+.btn-gradient {
+  background: linear-gradient(135deg, #EC4899, #8B5CF6);
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #DB2777, #7C3AED);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Chart animations */
+@keyframes chart-rise {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.chart-bar {
+  animation: chart-rise 0.8s ease-out;
+  transform-origin: bottom;
+}
+
+/* Sparkline animations */
+@keyframes draw-line {
+  from {
+    stroke-dashoffset: 100%;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.sparkline {
+  stroke-dasharray: 100%;
+  animation: draw-line 1.5s ease-in-out;
+}
+
+/* TypeScript interfaces for Beauty Pulse AI */
+export interface Trend {
+  id: string;
+  name: string;
+  score: number;
+  growthRate: number;
+  engagementPerMention: number;
+  volume: number;
+  status: 'Emerging' | 'Stable' | 'Declining';
+  platform: string;
+  hashtags: string[];
+  audience: {
+    genZ: number;
+    millennials: number;
+    genX: number;
+    boomers: number;
+  };
+  timeSeriesData: Array<{ date: string; value: number }>;
+  forecast: Array<{ date: string; value: number }>;
+  samplePosts: Array<{
+    id: string;
+    text: string;
+    engagement: number;
+    platform: string;
+  }>;
+}
+
+export interface Comment {
+  id: string;
+  text: string;
+  sentiment: 'Positive' | 'Neutral' | 'Negative';
+  qualityScore: number;
+  spamProbability: number;
+  platform: string;
+  keywords: string[];
+  engagement: number;
+  timestamp: string;
+}
+
+export interface Recommendation {
+  id: string;
+  title: string;
+  description: string;
+  impact: 'High' | 'Medium' | 'Low';
+  category: 'Trend' | 'Audience' | 'Content' | 'Strategy';
+  confidence: number;
+}
+
+export interface FilterState {
+  timeRange: '7d' | '14d' | '30d';
+  platform: 'All' | 'Instagram' | 'YouTube' | 'TikTok';
+  language: string;
+  searchQuery: string;
+  highQualityOnly: boolean;
+}
