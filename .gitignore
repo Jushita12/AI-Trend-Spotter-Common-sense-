@@ -1,4 +1,6 @@
+# ------------------------
 # Logs
+# ------------------------
 logs
 *.log
 npm-debug.log*
@@ -7,19 +9,59 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# ------------------------
+# Dependencies / Builds
+# ------------------------
+node_modules/
+dist/
+dist-ssr/
 *.local
 
-# Editor directories and files
+# ------------------------
+# Python
+# ------------------------
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+venv.bak/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Distribution / packaging
+*.egg-info/
+.eggs/
+build/
+develop-eggs/
+.installed.cfg
+
+# ------------------------
+# Environments
+# ------------------------
+.env
+.env.local
+.env.*.local
+
+# ------------------------
+# IDEs and Editors
+# ------------------------
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-.env
+
+# ------------------------
+# Jupyter
+# ------------------------
+.ipynb_checkpoints
