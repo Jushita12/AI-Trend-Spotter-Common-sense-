@@ -1,30 +1,53 @@
-🌟 Beauty Pulse AI — TrendSpotter + CommentSense
+Beauty Pulse AI — TrendSpotter + CommentSense
 L’Oréal x Monash Datathon 2025 | Team Code Kshatriya
 
-A web-based interactive dashboard that combines real-time beauty trend detection (TrendSpotter) with comment quality & sentiment analysis (CommentSense). Built to empower L’Oréal with actionable insights on what’s trending, who’s driving it, and how audiences are reacting.
+Beauty Pulse AI is a web-based dashboard that helps identify emerging beauty trends and understand how audiences react to them. The project combines two modules:
 
-✨ Key Features
+TrendSpotter → Detects rising and fading trends across platforms by analyzing hashtags, keywords, and engagement patterns.
 
-📊 Dashboard Components
+CommentSense → Evaluates audience feedback at scale by classifying sentiment, detecting spam, and scoring comment quality.
 
-Header → L’Oréal-inspired branding with live refresh indicator
+Our goal is to provide L’Oréal with a clear, interactive tool that shows what’s trending, who’s talking about it, and when to act.
 
-Sidebar Filters → Time range, platform (Instagram, YouTube, TikTok), language, search, CSV upload
+Features
 
-Trend Radar → Interactive bubble charts, trend scoring table, and sparklines to highlight emerging vs. declining trends
+Header & Branding → Clean, L’Oréal-inspired design with live data refresh
 
-Trend Detail → Time-series forecasting, hashtag/keyword clouds, audience segmentation (Gen Z, Millennials, etc.)
+Sidebar Filters → Time range, platform, language selection, CSV upload, and search
 
-CommentSense → Sentiment breakdown (positive/neutral/negative), spam detection, quality scoring of comments
+Trend Radar → Interactive bubble chart and trend table with growth scores and sparklines
 
-Recommendations → AI-powered campaign suggestions + one-click export (CSV/PDF)
+Trend Detail → Forecast charts, hashtag/keyword clouds, audience breakdowns
 
-⚙️ Technical Highlights
+CommentSense → Sentiment pie chart, spam vs quality ratio, comment table with scores
 
-Responsive web dashboard optimized for laptops/desktops
+Recommendations → Actionable insights with exportable reports (CSV/PDF)
 
-Interactive data visualizations for clarity and business usability
+Quick Start
+# Clone the repository
+git clone https://github.com/YOUR-USERNAME/beauty-pulse-ai.git
+cd beauty-pulse-ai
 
-Modular architecture with React + TypeScript frontend and Python (Streamlit/ML pipeline) backend
+# Install dependencies
+npm install                # frontend
+pip install -r requirements.txt   # backend (ML/Streamlit)
 
-Designed with premium L’Oréal brand aesthetics
+# Start servers
+npm run dev          # frontend
+streamlit run app.py # backend dashboard
+
+
+Open the dashboard at 👉 http://localhost:5173
+
+Datathon Focus
+
+Innovation → Fresh approach combining trend forecasting with audience comment analysis
+
+Execution → Built with React + TypeScript for the interface and Python/Streamlit for data modeling
+
+Functionality → Upload datasets, filter results, segment audiences, and generate reports
+
+Presentation → Professional visuals and simple navigation for business users
+
+👥 Team Code Kshatriya
+Turning data into beauty insights.
